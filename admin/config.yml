@@ -1,25 +1,26 @@
 backend:
   name: git-gateway
   branch: main
-  site_domain: "https://barber-shopv5.netlify.app"
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
-publish_mode: editorial_workflow
+locale: "es"
+
+site_url: "https://barber-shopv5.netlify.app"
+display_url: "https://barber-shopv5.netlify.app"
+
+logo_url: "https://i.postimg.cc/bw6Z7QRk/IMG-5558.jpg"
 
 collections:
   - name: "paginas"
     label: "Páginas"
-    files:
-      - file: "index.html"
-        label: "Página Principal"
-        name: "inicio"
-        fields:
-          - { label: "Título Principal", name: "titulo", widget: "string" }
-          - { label: "Subtítulo", name: "subtitulo", widget: "string" }
-          - { label: "Texto de Bienvenida", name: "bienvenida", widget: "text" }
-          - { label: "Imagen de Fondo", name: "imagen_fondo", widget: "image" }
+    folder: "content/paginas"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
 
   - name: "servicios"
     label: "Servicios"
@@ -27,10 +28,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Nombre del Servicio", name: "titulo", widget: "string" }
-      - { label: "Descripción", name: "descripcion", widget: "text" }
-      - { label: "Precio", name: "precio", widget: "string" }
-      - { label: "Imagen", name: "imagen", widget: "image" }
+      - { label: "Nombre del servicio", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Precio (opcional)", name: "price", widget: "string", required: false }
 
   - name: "galeria"
     label: "Galería"
@@ -38,8 +38,8 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "titulo", widget: "string" }
-      - { label: "Imagen", name: "imagen", widget: "image" }
+      - { label: "Título de la foto", name: "title", widget: "string" }
+      - { label: "Imagen", name: "image", widget: "image" }
 
   - name: "equipo"
     label: "Equipo"
@@ -47,6 +47,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Cargo", name: "cargo", widget: "string" }
-      - { label: "Foto", name: "foto", widget: "image" }
+      - { label: "Nombre", name: "name", widget: "string" }
+      - { label: "Puesto", name: "role", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Foto", name: "photo", widget: "image" }
