@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <title>Panel de Edición</title>
-    <!-- Identity también en /admin para asegurar el flujo de creación de contraseña -->
+
+    <!-- Netlify Identity para manejar invitaciones/sesiones -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- CSS del preview (copia los estilos de tu sitio para ver “igual que la web”) -->
+    <link rel="stylesheet" href="./preview.css" />
   </head>
   <body>
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <!-- Registro de plantillas de vista previa -->
+    <script src="./preview.js"></script>
   </body>
 </html>
