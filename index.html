@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duran's Barber Shop - Domina tu Estilo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ESTILOS CSS */
+      :root {
+        --color-fondo: #1a1a1a;
+        --color-texto: #ffffff;
+        --color-acento: #ffcc66;
+        --color-secundario: #333333;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--color-fondo);
+        color: var(--color-texto);
+        line-height: 1.6;
+      }
+
+      a { text-decoration: none; }
+
+      .header {
+        background-color: #000000;
+        padding: 15px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        flex-wrap: wrap;
+      }
+
+      .logo img {
+        height: 50px;
+        filter: invert(1) grayscale(100%) brightness(200%);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav a {
+        color: var(--color-texto);
+        margin-left: 25px;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover { color: var(--color-acento); }
+
+      .btn-cita {
+        background-color: var(--color-acento);
+        color: var(--color-fondo);
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 3px;
+      }
+
+      .hero-section {
+        background-image: url("https://i.postimg.cc/zv5DbBj8/IMG-5592.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 80px 5%;
+        text-align: center;
+        position: relative;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.7);
+      }
+
+      .hero-content { position: relative; z-index: 2; }
+
+      .hero-section h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .hero-section p {
+        font-size: 1.1em;
+        margin-bottom: 40px;
+      }
+
+      .services-section {
+        padding: 60px 5%;
+        text-align: center;
+      }
+
+      .services-section h2 {
+        color: var(--color-acento);
+        margin-bottom: 40px;
+      }
+
+      .services-grid {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .service-item {
+        flex: 1;
+        padding: 30px 20px;
+        background-color: var(--color-secundario);
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-item h3 {
+        color: var(--color-acento);
+        text-transform: uppercase;
+      }
+
+      .gallery-section {
+        padding: 60px 5%;
+      }
+
+      .gallery-section h2 {
+        text-align: center;
+        color: var(--color-acento);
+        margin-bottom: 40px;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+
+      .gallery-item img:hover { transform: scale(1.03); }
+
+      .footer {
+        background-color: #000000;
+        padding: 30px 5%;
+        text-align: center;
+        border-top: 3px solid var(--color-acento);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="https://i.postimg.cc/bw6Z7QRk/IMG-5558.jpg" alt="Duran's Barber Shop Logo" />
+      </div>
+      <nav class="nav">
+        <a href="#servicios">SERVICIOS</a>
+        <a href="#galeria">GALERÍA</a>
+        <a href="#">BARBEROS</a>
+        <a href="#">CONTACTO</a>
+        <a href="https://wa.me/17754199929?text=Hola,%20me%20gustar%C3%ADa%20reservar%20una%20cita"
+           target="_blank" class="btn-cita">RESERVAR AHORA</a>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>DOMINA TU ESTILO.</h1>
+        <p>Vive una experiencia de aseo experto en un ambiente atemporal.</p>
+        <a href="https://wa.me/17754199929?text=Hola,%20me%20gustar%C3%ADa%20reservar%20una%20cita"
+           target="_blank" class="btn-cita">RESERVAR CITA</a>
+      </div>
+    </section>
+
+    <section id="servicios" class="services-section">
+      <h2>NUESTROS SERVICIOS</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>CORTES & DEGRADADOS</h3>
+          <p>Estilos clásicos y modernos, incluyendo desvanecidos y diseños precisos.</p>
+        </div>
+        <div class="service-item">
+          <h3>RECORTES Y AFEITADOS DE BARBA</h3>
+          <p>Cuidado de barba con toalla caliente, perfilado y afeitado tradicional.</p>
+        </div>
+        <div class="service-item">
+          <h3>PAQUETES DE LUJO</h3>
+          <p>La experiencia completa: corte, barba y tratamiento exclusivo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="gallery-section">
+      <h2>GALERÍA DE ESTILOS</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://i.postimg.cc/Njyt0mc4/IMG-5588.jpg" /></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/YC47SYHm/IMG-5589.jpg" /></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/L8qSsLp1/IMG-5590.jpg" /></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Duran's Barber Shop. Todos los derechos reservados.</p>
+      <p><a href="https://maps.google.com/?q=3380+E+Russell+Rd+Ste+108+Las+Vegas,+NV"
+            target="_blank">3380 E Russell Rd Ste 108 Las Vegas, NV</a></p>
+    </footer>
+
+    <!-- BLOQUE CMS (lee el contenido editable de /data/home.json) -->
+    <script>
+      fetch('data/home.json')
+        .then(r => r.json())
+        .then(d => {
+          if (d.hero_background)
+            document.querySelector('.hero-section').style.backgroundImage = `url('${d.hero_background}')`;
+          if (d.hero_title)
+            document.querySelector('.hero-section h1').textContent = d.hero_title;
+          if (d.hero_subtitle)
+            document.querySelector('.hero-section p').textContent = d.hero_subtitle;
+        })
+        .catch(() => console.log("Sin conexión al CMS todavía."));
+    </script>
+  </body>
+</html>
