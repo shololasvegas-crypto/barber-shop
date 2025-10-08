@@ -2,19 +2,21 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Panel de Edición</title>
 
-    <!-- Netlify Identity para manejar invitaciones/sesiones -->
+    <!-- Netlify Identity para invitaciones/sesiones -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- CSS del preview (copia los estilos de tu sitio para ver “igual que la web”) -->
+    <!-- Fuentes y estilos del preview (mismo look que tu web) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./preview.css" />
   </head>
   <body>
     <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-    <!-- Registro de plantillas de vista previa -->
+    <!-- Plantillas de Vista Previa (render como tu web) -->
     <script src="./preview.js"></script>
   </body>
 </html>
