@@ -1,24 +1,52 @@
 backend:
   name: git-gateway
   branch: main
+  site_domain: "https://barber-shopv5.netlify.app"
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: editorial_workflow
 
 collections:
-  - name: "home"
-    label: "Página Principal"
+  - name: "paginas"
+    label: "Páginas"
     files:
-      - file: "data/home.json"
-        label: "Contenido Principal"
-        name: "home"
+      - file: "index.html"
+        label: "Página Principal"
+        name: "inicio"
         fields:
-          - { label: "Título Principal (Hero)", name: "hero_title", widget: "string" }
-          - { label: "Subtítulo (Descripción)", name: "hero_subtitle", widget: "string" }
-          - { label: "Imagen de Fondo (Hero)", name: "hero_background", widget: "image" }
-          - label: "Galería"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - { label: "Imagen", name: "image", widget: "image" }
-              - { label: "Descripción", name: "alt", widget: "string", required: false }
+          - { label: "Título Principal", name: "titulo", widget: "string" }
+          - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+          - { label: "Texto de Bienvenida", name: "bienvenida", widget: "text" }
+          - { label: "Imagen de Fondo", name: "imagen_fondo", widget: "image" }
+
+  - name: "servicios"
+    label: "Servicios"
+    folder: "content/servicios"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nombre del Servicio", name: "titulo", widget: "string" }
+      - { label: "Descripción", name: "descripcion", widget: "text" }
+      - { label: "Precio", name: "precio", widget: "string" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+
+  - name: "galeria"
+    label: "Galería"
+    folder: "content/galeria"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+
+  - name: "equipo"
+    label: "Equipo"
+    folder: "content/equipo"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Cargo", name: "cargo", widget: "string" }
+      - { label: "Foto", name: "foto", widget: "image" }
