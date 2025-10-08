@@ -1,0 +1,13 @@
+{
+  "hero_title": "DOMINA TU ESTILO.",
+  "hero_subtitle": "Vive una experiencia de aseo experto en un ambiente atemporal.",
+  "hero_background": "https://i.postimg.cc/zv5DbBj8/IMG-5592.jpg",
+  "gallery": [
+    { "image": "https://i.postimg.cc/Njyt0mc4/IMG-5588.jpg", "alt": "Corte de cabello moderno 1" },
+    { "image": "https://i.postimg.cc/YC47SYHm/IMG-5589.jpg", "alt": "Corte de cabello moderno 2" },
+    { "image": "https://i.postimg.cc/L8qSsLp1/IMG-5590.jpg", "alt": "Corte de cabello moderno 3" },
+    { "image": "https://i.postimg.cc/T3yxPg6y/IMG-5591.jpg", "alt": "Corte de cabello moderno 4" },
+    { "image": "https://i.postimg.cc/zGLNfKry/IMG-5593.jpg", "alt": "Corte de cabello moderno 5" },
+    { "image": "https://i.postimg.cc/ZKsZZj1v/IMG-5594.jpg", "alt": "Corte de cabello moderno 6" }
+  ]
+}
